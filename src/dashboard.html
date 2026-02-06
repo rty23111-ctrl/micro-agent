@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auth Dashboard</title>
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      h1 { margin-bottom: 0.5rem; }
+      .section { margin-top: 2rem; }
+      pre { background: #eee; padding: 1rem; border-radius: 6px; }
+      input { padding: 6px; width: 300px; }
+      button { padding: 6px 12px; margin-left: 6px; }
+      a { display: inline-block; margin-top: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Authentication Service Dashboard</h1>
+    <p>Agent‑first, minimal, deterministic.</p>
+
+    <div class="section">
+      <h2>Health</h2>
+      <form method="post" action="/dashboard/health">
+        <button>Check Health</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <h2>Issue Token</h2>
+      <form method="post" action="/dashboard/token">
+        <button>Generate Token</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <h2>Validate Token</h2>
+      <form method="post" action="/dashboard/validate">
+        <input name="token" placeholder="Paste token here" />
+        <button>Validate</button>
+      </form>
+    </div>
+  </body>
+</html>
